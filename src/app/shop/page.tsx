@@ -1,13 +1,26 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { ProductCard } from '@/components';
 import Link from 'next/link';
 import { ArrowLeft, Filter, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+interface Product {
+  id: string;
+  name: string;
+  slug?: string;
+  price: number;
+  discount?: number;
+  image: string;
+  rating: number;
+  reviews?: number;
+  inStock?: boolean;
+  category: string;
+}
+
 export default function ShopPage() {
-  const allProducts = [
+  const [allProducts, setAllProducts] = useState<Product[]>([
     {
       id: '1',
       name: 'Premium Wireless Headphones',
@@ -188,12 +201,33 @@ export default function ShopPage() {
       inStock: true,
       category: 'books',
     },
-  ];
+  ]);
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('newest');
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000]);
   const [minRating, setMinRating] = useState<number>(0);
+
+  // Carica i prodotti dal localStorage
+  useEffect(() => {
+    const savedProducts = localStorage.getItem('products');
+    if (savedProducts) {
+      try {
+        const products = JSON.parse(savedProducts);
+        const productsWithDefaults = products.map((p: Product) => ({
+          ...p,
+          slug: p.slug || p.name.toLowerCase().replace(/\s+/g, '-'),
+          discount: p.discount || 0,
+          reviews: p.reviews || 0,
+          inStock: p.inStock !== undefined ? p.inStock : true,
+          rating: p.rating || 4.5,
+        }));
+        setAllProducts([...allProducts, ...productsWithDefaults]);
+      } catch (error) {
+        console.log('No custom products found, using defaults');
+      }
+    }
+  }, []);
 
   const filteredProducts = useMemo(() => {
     let filtered = allProducts.filter((product) => {
@@ -211,7 +245,7 @@ export default function ShopPage() {
     } else if (sortBy === 'rating') {
       filtered.sort((a, b) => b.rating - a.rating);
     } else if (sortBy === 'popular') {
-      filtered.sort((a, b) => b.reviews - a.reviews);
+      filtered.sort((a, b) => (b.reviews ?? 0) - (a.reviews ?? 0));
     }
 
     return filtered;
@@ -363,7 +397,13 @@ export default function ShopPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                 >
-                  <ProductCard {...product} />
+                  <ProductCard 
+                    {...product}
+                    slug={product.slug || product.name.toLowerCase().replace(/\s+/g, '-')}
+                    discount={product.discount || 0}
+                    reviews={product.reviews || 0}
+                    inStock={product.inStock !== undefined ? product.inStock : true}
+                  />
                 </motion.div>
               ))}
             </div>

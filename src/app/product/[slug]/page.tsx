@@ -11,7 +11,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
   const { slug } = use(params);
   const [quantity, setQuantity] = useState(1);
   const [isWishlisted, setIsWishlisted] = useState(false);
-  const addToCart = useCartStore((state) => state.addToCart);
+  const addItem = useCartStore((state) => state.addItem);
 
   // Mock product data - in real app would fetch from API
   const product = {
@@ -49,8 +49,8 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
   };
 
   const handleAddToCart = () => {
-    addToCart({
-      id: product.id,
+    addItem({
+      productId: product.id,
       name: product.name,
       price: product.price,
       image: product.image,
