@@ -36,12 +36,12 @@ export default function Analytics() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-white rounded-lg shadow p-6">
           <h3 className="text-gray-600 font-semibold mb-2">Ricavi Totali</h3>
-          <p className="text-3xl font-bold text-slate-600">$18,140</p>
+          <p className="text-3xl font-bold text-blue-600">$18,140</p>
           <p className="text-green-600 text-sm mt-2">↑ 12% rispetto al mese scorso</p>
         </div>
         <div className="bg-white rounded-lg shadow p-6">
           <h3 className="text-gray-600 font-semibold mb-2">Ordini Totali</h3>
-          <p className="text-3xl font-bold text-slate-600">171</p>
+          <p className="text-3xl font-bold text-purple-600">171</p>
           <p className="text-green-600 text-sm mt-2">↑ 8% rispetto al mese scorso</p>
         </div>
         <div className="bg-white rounded-lg shadow p-6">

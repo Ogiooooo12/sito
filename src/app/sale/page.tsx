@@ -7,17 +7,6 @@ import { ArrowLeft } from 'lucide-react';
 export default function SalePage() {
   const products = [
     {
-      id: '1',
-      name: 'Premium Wireless Headphones',
-      slug: 'premium-wireless-headphones',
-      price: 299.99,
-      discount: 50,
-      image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop',
-      rating: 4.8,
-      reviews: 245,
-      inStock: true,
-    },
-    {
       id: '2',
       name: 'Smart Watch Ultra Pro',
       slug: 'smart-watch-ultra-pro',
@@ -78,7 +67,7 @@ export default function SalePage() {
     <div className="max-w-7xl mx-auto px-4 py-12">
       {/* Header */}
       <div className="mb-12">
-        <Link href="/" className="flex items-center gap-2 text-slate-600 hover:text-slate-700 mb-6">
+        <Link href="/" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 mb-6">
           <ArrowLeft className="w-4 h-4" />
           Back to Home
         </Link>
@@ -92,7 +81,7 @@ export default function SalePage() {
 
       {/* Sale Banner */}
       <div className="bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 text-white rounded-lg p-8 mb-12">
-        <p className="text-xl font-bold">Limited time only! Use code <span className="text-2xl bg-white text-slate-600 px-3 py-1 rounded">SAVE50</span></p>
+        <p className="text-xl font-bold">Limited time only! Use code <span className="text-2xl bg-white text-pink-600 px-3 py-1 rounded">SAVE50</span></p>
       </div>
 
       {/* Products Grid */}

@@ -8,17 +8,6 @@ export default function WishlistPage() {
   // Mock wishlist data
   const wishlistItems = [
     {
-      id: '1',
-      name: 'Premium Wireless Headphones',
-      slug: 'premium-wireless-headphones',
-      price: 299.99,
-      discount: 20,
-      image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop',
-      rating: 4.8,
-      reviews: 245,
-      inStock: true,
-    },
-    {
       id: '2',
       name: 'Smart Watch Ultra Pro',
       slug: 'smart-watch-ultra-pro',
