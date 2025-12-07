@@ -59,7 +59,7 @@ export default function AdminOrders() {
       case 'Processing':
         return 'bg-blue-100 text-blue-800';
       case 'Shipped':
-        return 'bg-purple-100 text-purple-800';
+        return 'bg-blue-100 text-blue-800';
       case 'Delivered':
         return 'bg-green-100 text-green-800';
       default:

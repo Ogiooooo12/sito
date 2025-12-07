@@ -204,7 +204,7 @@ export default function Home() {
       </section>
 
       {/* Promo Section */}
-      <section className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white my-16">
+      <section className="bg-gradient-to-r from-blue-900 via-blue-900 to-blue-900 text-white my-16">
         <div className="max-w-7xl mx-auto px-4 py-16 text-center">
           <h2 className="text-4xl font-bold mb-6">Limited Time Offer</h2>
           <p className="text-xl text-blue-100 mb-8">
@@ -212,7 +212,7 @@ export default function Home() {
           </p>
           <Link
             href="/sale"
-            className="inline-block bg-gradient-to-r from-indigo-400 to-pink-400 hover:from-blue-500 hover:to-pink-500 text-white px-8 py-3 rounded-lg font-semibold transition"
+            className="inline-block bg-gradient-to-r from-blue-400 to-blue-400 hover:from-blue-500 hover:to-blue-500 text-white px-8 py-3 rounded-lg font-semibold transition"
           >
             Claim Your Discount
           </Link>
@@ -223,7 +223,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="max-w-7xl mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 rounded-2xl p-12 text-center border-2 border-indigo-200">
+        <div className="bg-gradient-to-r from-blue-100 via-blue-100 to-blue-100 rounded-2xl p-12 text-center border-2 border-blue-200">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Ready to Start Shopping?
           </h2>

@@ -21,7 +21,7 @@ export default function OrderConfirmationPage() {
       </div>
 
       {/* Order Details Card */}
-      <div className="bg-white rounded-lg border border-indigo-200 p-8 mb-8">
+      <div className="bg-white rounded-lg border border-blue-200 p-8 mb-8">
         <div className="grid grid-cols-2 gap-8 mb-8">
           <div>
             <p className="text-sm text-gray-600 mb-1">Order Number</p>
@@ -80,7 +80,7 @@ export default function OrderConfirmationPage() {
       </div>
 
       {/* What Happens Next */}
-      <div className="bg-blue-50 rounded-lg p-6 border border-indigo-200 mb-8">
+      <div className="bg-blue-50 rounded-lg p-6 border border-blue-200 mb-8">
         <h3 className="font-bold text-gray-900 mb-4">What Happens Next?</h3>
         <ul className="space-y-2 text-gray-700">
           <li>✓ You'll receive an order confirmation email shortly</li>

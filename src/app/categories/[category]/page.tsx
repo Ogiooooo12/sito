@@ -96,7 +96,7 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
       </div>
 
       {/* Filters Bar */}
-      <div className="flex flex-col md:flex-row gap-4 mb-8 pb-6 border-b border-indigo-200">
+      <div className="flex flex-col md:flex-row gap-4 mb-8 pb-6 border-b border-blue-200">
         <div className="flex-1">
           <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-50">
             <option>All Products</option>

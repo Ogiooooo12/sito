@@ -151,7 +151,7 @@ export default function CheckoutPage() {
 
           {/* Shipping Information */}
           {step === 'shipping' && (
-            <form onSubmit={handleShippingSubmit} className="bg-white rounded-lg p-6 border border-indigo-200">
+            <form onSubmit={handleShippingSubmit} className="bg-white rounded-lg p-6 border border-blue-200">
               <h2 className="text-2xl font-bold mb-6">Shipping Address</h2>
 
               <div className="grid grid-cols-2 gap-4 mb-4">
@@ -271,7 +271,7 @@ export default function CheckoutPage() {
 
           {/* Payment Information */}
           {step === 'payment' && (
-            <form onSubmit={handlePaymentSubmit} className="bg-white rounded-lg p-6 border border-indigo-200">
+            <form onSubmit={handlePaymentSubmit} className="bg-white rounded-lg p-6 border border-blue-200">
               <h2 className="text-2xl font-bold mb-6">Payment Method</h2>
 
               <div className="mb-4">
@@ -361,11 +361,11 @@ export default function CheckoutPage() {
 
           {/* Review Order */}
           {step === 'review' && (
-            <div className="bg-white rounded-lg p-6 border border-indigo-200">
+            <div className="bg-white rounded-lg p-6 border border-blue-200">
               <h2 className="text-2xl font-bold mb-6">Order Review</h2>
 
               {/* Shipping Summary */}
-              <div className="mb-6 pb-6 border-b border-indigo-200">
+              <div className="mb-6 pb-6 border-b border-blue-200">
                 <h3 className="font-bold text-gray-900 mb-3">Shipping To:</h3>
                 <p className="text-gray-700">
                   {shipping_info.firstName} {shipping_info.lastName}
@@ -405,11 +405,11 @@ export default function CheckoutPage() {
 
         {/* Order Summary */}
         <div className="lg:col-span-1">
-          <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-lg p-6 border border-indigo-200 sticky top-4">
+          <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-lg p-6 border border-blue-200 sticky top-4">
             <h3 className="text-xl font-bold mb-6 text-gray-900">Order Summary</h3>
 
             {/* Items */}
-            <div className="space-y-3 mb-6 pb-6 border-b border-indigo-200">
+            <div className="space-y-3 mb-6 pb-6 border-b border-blue-200">
               {cartItems.map((item) => (
                 <div key={item.productId} className="flex justify-between text-sm">
                   <span className="text-gray-700">

@@ -267,7 +267,7 @@ export default function ShopPage() {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Filters Sidebar */}
         <div className="lg:col-span-1">
-          <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-lg p-6 border border-indigo-200 sticky top-4">
+          <div className="bg-gradient-to-br from-blue-50 via-blue-50 to-blue-50 rounded-lg p-6 border border-blue-200 sticky top-4">
             <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
               <Filter className="w-5 h-5" />
               Filters
@@ -300,7 +300,7 @@ export default function ShopPage() {
             </div>
 
             {/* Price Range Filter */}
-            <div className="mb-6 pb-6 border-b border-indigo-200">
+            <div className="mb-6 pb-6 border-b border-blue-200">
               <h3 className="font-semibold text-gray-900 mb-3">Price Range</h3>
               <div className="space-y-2">
                 <input
@@ -309,7 +309,7 @@ export default function ShopPage() {
                   max="1000"
                   value={priceRange[1]}
                   onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])}
-                  className="w-full h-2 bg-indigo-200 rounded-lg appearance-none cursor-pointer"
+                  className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer"
                 />
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-700">${priceRange[0]}</span>
@@ -319,7 +319,7 @@ export default function ShopPage() {
             </div>
 
             {/* Rating Filter */}
-            <div className="mb-6 pb-6 border-b border-indigo-200">
+            <div className="mb-6 pb-6 border-b border-blue-200">
               <h3 className="font-semibold text-gray-900 mb-3">Minimum Rating</h3>
               <div className="space-y-2">
                 {[0, 3, 3.5, 4, 4.5, 4.8].map((rating) => (

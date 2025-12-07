@@ -75,7 +75,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
         {/* Product Image */}
         <div className="flex flex-col gap-4">
-          <div className="relative w-full aspect-square bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-2xl overflow-hidden flex items-center justify-center group cursor-pointer">
+          <div className="relative w-full aspect-square bg-gradient-to-br from-blue-100 via-blue-100 to-blue-100 rounded-2xl overflow-hidden flex items-center justify-center group cursor-pointer">
             <Image
               src={product.image}
               alt={product.name}
@@ -165,7 +165,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
               onClick={handleWishlist}
               className={`px-6 py-3 rounded-lg border-2 font-bold transition ${
                 isWishlisted
-                  ? 'bg-pink-50 border-blue-600 text-blue-600'
+                  ? 'bg-blue-50 border-blue-600 text-blue-600'
                   : 'border-gray-300 text-gray-700 hover:border-blue-600'
               }`}
             >
@@ -186,7 +186,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
       </div>
 
       {/* Features and Specs */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-12 border-y border-indigo-200">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-12 border-y border-blue-200">
         {/* Features */}
         <div>
           <h2 className="text-3xl font-bold mb-6 text-gray-900">Key Features</h2>

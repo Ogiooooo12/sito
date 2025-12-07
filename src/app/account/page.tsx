@@ -11,7 +11,7 @@ export default function AccountPage() {
         Back to Home
       </Link>
       
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8">
+      <div className="bg-gradient-to-r from-blue-50 to-blue-50 rounded-lg p-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">My Account</h1>
         <p className="text-lg text-gray-600">Account features coming soon!</p>
       </div>

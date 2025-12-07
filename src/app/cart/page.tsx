@@ -112,7 +112,7 @@ export default function CartPage() {
 
         {/* Order Summary */}
         <div>
-          <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-lg shadow-sm p-6 border border-indigo-200">
+          <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-lg shadow-sm p-6 border border-blue-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Order Summary</h2>
 
             {/* Breakdown */}
