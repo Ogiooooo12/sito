@@ -67,7 +67,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Back Button */}
-      <Link href="/" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 mb-8">
+      <Link href="/" className="flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-8">
         <ArrowLeft className="w-4 h-4" />
         Back to Shopping
       </Link>
@@ -75,7 +75,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
         {/* Product Image */}
         <div className="flex flex-col gap-4">
-          <div className="relative w-full aspect-square bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 rounded-2xl overflow-hidden flex items-center justify-center group cursor-pointer">
+          <div className="relative w-full aspect-square bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-2xl overflow-hidden flex items-center justify-center group cursor-pointer">
             <Image
               src={product.image}
               alt={product.name}
@@ -84,7 +84,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
             {product.discount > 0 && (
-              <div className="absolute top-4 right-4 bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-4 py-2 rounded-full font-bold text-sm">
+              <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-blue-600 text-white px-4 py-2 rounded-full font-bold text-sm">
                 -{product.discount}%
               </div>
             )}
@@ -113,14 +113,14 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
           {/* Price */}
           <div className="mb-6">
             <div className="flex items-center gap-4 mb-2">
-              <span className="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">
                 ${product.price}
               </span>
               <span className="text-xl text-gray-500 line-through">
                 ${product.originalPrice}
               </span>
             </div>
-            <p className="text-indigo-600 font-semibold">
+            <p className="text-blue-600 font-semibold">
               Save ${(product.originalPrice - product.price).toFixed(2)}
             </p>
           </div>
@@ -137,17 +137,17 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
 
           {/* Quantity and Actions */}
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <div className="flex items-center border border-indigo-300 rounded-lg">
+            <div className="flex items-center border border-gray-300 rounded-lg">
               <button
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                className="px-4 py-2 hover:bg-indigo-50 transition"
+                className="px-4 py-2 hover:bg-blue-50 transition"
               >
                 −
               </button>
               <span className="px-6 py-2 font-semibold">{quantity}</span>
               <button
                 onClick={() => setQuantity(quantity + 1)}
-                className="px-4 py-2 hover:bg-indigo-50 transition"
+                className="px-4 py-2 hover:bg-blue-50 transition"
               >
                 +
               </button>
@@ -155,7 +155,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
 
             <button
               onClick={handleAddToCart}
-              className="flex-1 px-6 py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white font-bold rounded-lg hover:shadow-lg transition flex items-center justify-center gap-2"
+              className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg hover:shadow-lg transition flex items-center justify-center gap-2"
             >
               <ShoppingCart className="w-5 h-5" />
               Add to Cart
@@ -165,16 +165,16 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
               onClick={handleWishlist}
               className={`px-6 py-3 rounded-lg border-2 font-bold transition ${
                 isWishlisted
-                  ? 'bg-pink-50 border-pink-600 text-pink-600'
-                  : 'border-indigo-300 text-gray-700 hover:border-indigo-600'
+                  ? 'bg-pink-50 border-blue-600 text-blue-600'
+                  : 'border-gray-300 text-gray-700 hover:border-blue-600'
               }`}
             >
-              <Heart className={`w-5 h-5 ${isWishlisted ? 'fill-pink-600' : ''}`} />
+              <Heart className={`w-5 h-5 ${isWishlisted ? 'fill-blue-600' : ''}`} />
             </button>
           </div>
 
           {/* Shipping Info */}
-          <div className="bg-indigo-50 rounded-lg p-4 mb-8">
+          <div className="bg-blue-50 rounded-lg p-4 mb-8">
             <p className="text-sm text-gray-700">
               <span className="font-semibold">🚚 Free shipping</span> on orders over $50
             </p>
@@ -193,7 +193,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
           <ul className="space-y-3">
             {product.features.map((feature, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <span className="text-indigo-600 font-bold mt-1">✓</span>
+                <span className="text-blue-600 font-bold mt-1">✓</span>
                 <span className="text-gray-700">{feature}</span>
               </li>
             ))}
@@ -205,7 +205,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
           <h2 className="text-3xl font-bold mb-6 text-gray-900">Specifications</h2>
           <div className="space-y-3">
             {Object.entries(product.specifications).map(([key, value]) => (
-              <div key={key} className="flex justify-between border-b border-indigo-100 pb-3">
+              <div key={key} className="flex justify-between border-b border-blue-100 pb-3">
                 <span className="font-semibold text-gray-700">{key}</span>
                 <span className="text-gray-600">{value}</span>
               </div>
@@ -219,7 +219,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
         <h2 className="text-3xl font-bold mb-8 text-gray-900">Customer Reviews</h2>
         <div className="space-y-6">
           {[1, 2, 3].map((review) => (
-            <div key={review} className="border-l-4 border-indigo-600 pl-6 py-4">
+            <div key={review} className="border-l-4 border-blue-600 pl-6 py-4">
               <div className="flex gap-1 mb-2">
                 {[...Array(5)].map((_, i) => (
                   <Star

@@ -80,7 +80,7 @@ export default function OrderConfirmationPage() {
       </div>
 
       {/* What Happens Next */}
-      <div className="bg-indigo-50 rounded-lg p-6 border border-indigo-200 mb-8">
+      <div className="bg-blue-50 rounded-lg p-6 border border-indigo-200 mb-8">
         <h3 className="font-bold text-gray-900 mb-4">What Happens Next?</h3>
         <ul className="space-y-2 text-gray-700">
           <li>✓ You'll receive an order confirmation email shortly</li>
@@ -95,13 +95,13 @@ export default function OrderConfirmationPage() {
       <div className="flex flex-col sm:flex-row gap-4">
         <Link
           href="/"
-          className="flex-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-3 rounded-lg font-bold hover:shadow-lg transition text-center"
+          className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg font-bold hover:shadow-lg transition text-center"
         >
           Continue Shopping
         </Link>
         <Link
           href="/account"
-          className="flex-1 border-2 border-indigo-600 text-indigo-600 py-3 rounded-lg font-bold hover:bg-indigo-50 transition text-center"
+          className="flex-1 border-2 border-blue-600 text-blue-600 py-3 rounded-lg font-bold hover:bg-blue-50 transition text-center"
         >
           View My Orders
         </Link>
@@ -111,15 +111,15 @@ export default function OrderConfirmationPage() {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <div className="grid grid-cols-3 gap-6">
           <div className="text-center">
-            <div className="text-3xl font-bold text-indigo-600 mb-2">30</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">30</div>
             <p className="text-sm text-gray-600">Day Returns</p>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-2">✓</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">✓</div>
             <p className="text-sm text-gray-600">100% Secure</p>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-pink-600 mb-2">24/7</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
             <p className="text-sm text-gray-600">Support</p>
           </div>
         </div>

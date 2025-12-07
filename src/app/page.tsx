@@ -102,7 +102,7 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white">
+      <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -118,7 +118,7 @@ export default function Home() {
             <div className="flex gap-4">
               <Link
                 href="/categories/electronics"
-                className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition flex items-center gap-2"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition flex items-center gap-2"
               >
                 Shop Now <ArrowRight className="w-5 h-5" />
               </Link>
@@ -158,9 +158,9 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-6 rounded-lg bg-gradient-to-br from-indigo-50 to-purple-50 hover:shadow-lg transition"
+                className="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-purple-50 hover:shadow-lg transition"
               >
-                <Icon className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
+                <Icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {feature.title}
                 </h3>
@@ -196,7 +196,7 @@ export default function Home() {
         <div className="text-center mt-12">
           <Link
             href="/categories/all"
-            className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition"
           >
             View All Products
           </Link>
@@ -207,12 +207,12 @@ export default function Home() {
       <section className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white my-16">
         <div className="max-w-7xl mx-auto px-4 py-16 text-center">
           <h2 className="text-4xl font-bold mb-6">Limited Time Offer</h2>
-          <p className="text-xl text-indigo-100 mb-8">
+          <p className="text-xl text-blue-100 mb-8">
             Get up to 50% off on selected items. Use code <span className="font-bold text-yellow-300">SAVE50</span>
           </p>
           <Link
             href="/sale"
-            className="inline-block bg-gradient-to-r from-indigo-400 to-pink-400 hover:from-indigo-500 hover:to-pink-500 text-white px-8 py-3 rounded-lg font-semibold transition"
+            className="inline-block bg-gradient-to-r from-indigo-400 to-pink-400 hover:from-blue-500 hover:to-pink-500 text-white px-8 py-3 rounded-lg font-semibold transition"
           >
             Claim Your Discount
           </Link>
@@ -223,7 +223,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="max-w-7xl mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-2xl p-12 text-center border-2 border-indigo-200">
+        <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 rounded-2xl p-12 text-center border-2 border-indigo-200">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Ready to Start Shopping?
           </h2>
@@ -232,7 +232,7 @@ export default function Home() {
           </p>
           <Link
             href="/categories/electronics"
-            className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition"
           >
             Explore All Products
           </Link>

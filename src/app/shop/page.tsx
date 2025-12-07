@@ -254,12 +254,12 @@ export default function ShopPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Header */}
-      <Link href="/" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 mb-8">
+      <Link href="/" className="flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-8">
         <ArrowLeft className="w-4 h-4" />
         Back to Home
       </Link>
 
-      <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+      <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
         Shop All Products
       </h1>
       <p className="text-gray-600 mb-8">Discover {filteredProducts.length} amazing products</p>
@@ -267,7 +267,7 @@ export default function ShopPage() {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Filters Sidebar */}
         <div className="lg:col-span-1">
-          <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-lg p-6 border border-indigo-200 sticky top-4">
+          <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-lg p-6 border border-indigo-200 sticky top-4">
             <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
               <Filter className="w-5 h-5" />
               Filters
@@ -291,7 +291,7 @@ export default function ShopPage() {
                       value={cat.value}
                       checked={selectedCategory === cat.value}
                       onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="w-4 h-4 text-indigo-600 cursor-pointer"
+                      className="w-4 h-4 text-blue-600 cursor-pointer"
                     />
                     <span className="text-gray-700">{cat.label}</span>
                   </label>
@@ -330,7 +330,7 @@ export default function ShopPage() {
                       value={rating}
                       checked={minRating === rating}
                       onChange={(e) => setMinRating(Number(e.target.value))}
-                      className="w-4 h-4 text-indigo-600 cursor-pointer"
+                      className="w-4 h-4 text-blue-600 cursor-pointer"
                     />
                     <span className="text-gray-700">
                       {rating === 0 ? 'All' : `${rating}+ ⭐`}
@@ -346,7 +346,7 @@ export default function ShopPage() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-3 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               >
                 <option value="newest">Newest</option>
                 <option value="price-low">Price: Low to High</option>
@@ -364,7 +364,7 @@ export default function ShopPage() {
                 setPriceRange([0, 1000]);
                 setMinRating(0);
               }}
-              className="w-full mt-6 px-4 py-2 border-2 border-indigo-600 text-indigo-600 font-semibold rounded-lg hover:bg-indigo-50 transition"
+              className="w-full mt-6 px-4 py-2 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition"
             >
               Reset Filters
             </button>
@@ -383,7 +383,7 @@ export default function ShopPage() {
                   setPriceRange([0, 1000]);
                   setMinRating(0);
                 }}
-                className="text-indigo-600 hover:text-indigo-700 font-semibold"
+                className="text-blue-600 hover:text-blue-700 font-semibold"
               >
                 Clear filters
               </button>

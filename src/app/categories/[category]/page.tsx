@@ -83,11 +83,11 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
     <div className="max-w-7xl mx-auto px-4 py-12">
       {/* Header */}
       <div className="mb-12">
-        <Link href="/" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 mb-6">
+        <Link href="/" className="flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-6">
           <ArrowLeft className="w-4 h-4" />
           Back to Home
         </Link>
-        <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+        <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
           {categoryName}
         </h1>
         <p className="text-lg text-gray-600">
@@ -98,7 +98,7 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
       {/* Filters Bar */}
       <div className="flex flex-col md:flex-row gap-4 mb-8 pb-6 border-b border-indigo-200">
         <div className="flex-1">
-          <select className="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-indigo-50">
+          <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-50">
             <option>All Products</option>
             <option>Best Sellers</option>
             <option>Newest</option>
@@ -107,10 +107,10 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
           </select>
         </div>
         <div className="flex gap-2">
-          <button className="px-4 py-2 border border-indigo-300 rounded-lg hover:bg-indigo-50 transition">
+          <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-blue-50 transition">
             Grid
           </button>
-          <button className="px-4 py-2 border border-indigo-300 rounded-lg hover:bg-indigo-50 transition">
+          <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-blue-50 transition">
             List
           </button>
         </div>
@@ -125,7 +125,7 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
 
       {/* Load More */}
       <div className="mt-12 text-center">
-        <button className="px-8 py-3 border-2 border-indigo-600 text-indigo-600 font-semibold rounded-lg hover:bg-indigo-50 transition">
+        <button className="px-8 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition">
           Load More Products
         </button>
       </div>

@@ -86,7 +86,7 @@ export default function CheckoutPage() {
       <div className="max-w-7xl mx-auto px-4 py-16 text-center">
         <ShoppingBag className="w-16 h-16 mx-auto mb-4 text-gray-400" />
         <h2 className="text-2xl font-bold mb-4">Your cart is empty</h2>
-        <Link href="/" className="text-indigo-600 hover:text-indigo-700 font-semibold">
+        <Link href="/" className="text-blue-600 hover:text-blue-700 font-semibold">
           Continue Shopping
         </Link>
       </div>
@@ -96,12 +96,12 @@ export default function CheckoutPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Header */}
-      <Link href="/cart" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 mb-8">
+      <Link href="/cart" className="flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-8">
         <ArrowLeft className="w-4 h-4" />
         Back to Cart
       </Link>
 
-      <h1 className="text-4xl font-bold mb-12 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+      <h1 className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
         Checkout
       </h1>
 
@@ -114,7 +114,7 @@ export default function CheckoutPage() {
               onClick={() => setStep('shipping')}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition ${
                 step === 'shipping'
-                  ? 'bg-indigo-600 text-white'
+                  ? 'bg-blue-600 text-white'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -126,7 +126,7 @@ export default function CheckoutPage() {
               disabled={step === 'shipping'}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition ${
                 step === 'payment'
-                  ? 'bg-indigo-600 text-white'
+                  ? 'bg-blue-600 text-white'
                   : step === 'shipping'
                     ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -140,7 +140,7 @@ export default function CheckoutPage() {
               disabled={step !== 'review'}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition ${
                 step === 'review'
-                  ? 'bg-indigo-600 text-white'
+                  ? 'bg-blue-600 text-white'
                   : 'bg-gray-100 text-gray-400 cursor-not-allowed'
               }`}
             >
@@ -165,7 +165,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setShippingInfo({ ...shipping_info, firstName: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -179,7 +179,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setShippingInfo({ ...shipping_info, lastName: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -195,7 +195,7 @@ export default function CheckoutPage() {
                   onChange={(e) =>
                     setShippingInfo({ ...shipping_info, email: e.target.value })
                   }
-                  className="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -210,7 +210,7 @@ export default function CheckoutPage() {
                   onChange={(e) =>
                     setShippingInfo({ ...shipping_info, address: e.target.value })
                   }
-                  className="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -226,7 +226,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setShippingInfo({ ...shipping_info, city: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -240,7 +240,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setShippingInfo({ ...shipping_info, state: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -254,7 +254,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setShippingInfo({ ...shipping_info, zip: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -262,7 +262,7 @@ export default function CheckoutPage() {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-indigo-600 to-pink-600 text-white py-3 rounded-lg font-bold hover:shadow-lg transition"
+                className="w-full bg-gradient-to-r from-blue-600 to-blue-600 text-white py-3 rounded-lg font-bold hover:shadow-lg transition"
               >
                 Continue to Payment
               </button>
@@ -284,7 +284,7 @@ export default function CheckoutPage() {
                   onChange={(e) =>
                     setPaymentInfo({ ...payment_info, cardName: e.target.value })
                   }
-                  className="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -303,7 +303,7 @@ export default function CheckoutPage() {
                       cardNumber: e.target.value.replace(/\s/g, ''),
                     })
                   }
-                  className="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -320,7 +320,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setPaymentInfo({ ...payment_info, expiry: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -335,7 +335,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setPaymentInfo({ ...payment_info, cvc: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -345,13 +345,13 @@ export default function CheckoutPage() {
                 <button
                   type="button"
                   onClick={() => setStep('shipping')}
-                  className="flex-1 px-6 py-3 border-2 border-indigo-600 text-indigo-600 rounded-lg font-bold hover:bg-indigo-50 transition"
+                  className="flex-1 px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-50 transition"
                 >
                   Back
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 bg-gradient-to-r from-indigo-600 to-pink-600 text-white py-3 rounded-lg font-bold hover:shadow-lg transition"
+                  className="flex-1 bg-gradient-to-r from-blue-600 to-blue-600 text-white py-3 rounded-lg font-bold hover:shadow-lg transition"
                 >
                   Review Order
                 </button>
@@ -387,14 +387,14 @@ export default function CheckoutPage() {
                 <button
                   type="button"
                   onClick={() => setStep('payment')}
-                  className="flex-1 px-6 py-3 border-2 border-indigo-600 text-indigo-600 rounded-lg font-bold hover:bg-indigo-50 transition"
+                  className="flex-1 px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-50 transition"
                 >
                   Back
                 </button>
                 <button
                   onClick={handlePlaceOrder}
                   disabled={loading}
-                  className="flex-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-3 rounded-lg font-bold hover:shadow-lg transition disabled:opacity-50"
+                  className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg font-bold hover:shadow-lg transition disabled:opacity-50"
                 >
                   {loading ? 'Processing...' : 'Place Order'}
                 </button>
@@ -405,7 +405,7 @@ export default function CheckoutPage() {
 
         {/* Order Summary */}
         <div className="lg:col-span-1">
-          <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-lg p-6 border border-indigo-200 sticky top-4">
+          <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-lg p-6 border border-indigo-200 sticky top-4">
             <h3 className="text-xl font-bold mb-6 text-gray-900">Order Summary</h3>
 
             {/* Items */}
@@ -439,10 +439,10 @@ export default function CheckoutPage() {
                 </span>
                 <span>{shipping > 0 ? `$${shipping.toFixed(2)}` : 'FREE'}</span>
               </div>
-              <div className="pt-4 border-t-2 border-indigo-300">
+              <div className="pt-4 border-t-2 border-gray-300">
                 <div className="flex justify-between text-xl font-bold text-gray-900">
                   <span>Total:</span>
-                  <span className="bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">
                     ${total.toFixed(2)}
                   </span>
                 </div>

@@ -103,7 +103,7 @@ export default function CartPage() {
 
           <Link
             href="/categories/electronics"
-            className="mt-6 text-indigo-600 hover:text-indigo-700 font-semibold flex items-center gap-2"
+            className="mt-6 text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-2"
           >
             <ArrowLeft className="w-4 h-4" />
             Continue Shopping
@@ -112,7 +112,7 @@ export default function CartPage() {
 
         {/* Order Summary */}
         <div>
-          <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-lg shadow-sm p-6 border border-indigo-200">
+          <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-lg shadow-sm p-6 border border-indigo-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Order Summary</h2>
 
             {/* Breakdown */}
@@ -144,7 +144,7 @@ export default function CartPage() {
             {/* Checkout Button */}
             <Link
               href="/checkout"
-              className="block w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:shadow-lg text-white font-semibold py-3 rounded-lg transition mb-3 text-center"
+              className="block w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:shadow-lg text-white font-semibold py-3 rounded-lg transition mb-3 text-center"
             >
               Proceed to Checkout
             </Link>
@@ -169,7 +169,7 @@ export default function CartPage() {
                 <input
                   type="text"
                   placeholder="Enter code"
-                  className="flex-1 px-3 py-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button className="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-semibold transition">
                   Apply
