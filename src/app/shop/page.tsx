@@ -32,14 +32,17 @@ export default function ShopPage() {
     if (savedProducts) {
       try {
         const products = JSON.parse(savedProducts);
-        const productsWithDefaults = products.map((p: Product) => ({
+        const productsWithDefaults = products
+          .map((p: Product) => ({
           ...p,
           slug: p.slug || p.name.toLowerCase().replace(/\s+/g, '-'),
           discount: p.discount || 0,
           reviews: p.reviews || 0,
           inStock: p.inStock !== undefined ? p.inStock : true,
           rating: p.rating || 4.5,
-        }));
+          }))
+          .filter((p: Product) => !(p.category && p.category.toLowerCase() === 'electronics'));
+
         setAllProducts(productsWithDefaults);
       } catch (error) {
         console.log('Error loading products from localStorage');
@@ -76,7 +79,7 @@ export default function ShopPage() {
       {/* Header Section */}
       <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b-4 border-amber-500">
         <div className="max-w-7xl mx-auto px-4 py-12">
-          <Link href="/" className="inline-flex items-center gap-2 bg-blue-400 hover:bg-blue-300 mb-6 transition font-semibold">
+          <Link href="/" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 mb-6 transition font-semibold">
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
@@ -106,7 +109,7 @@ export default function ShopPage() {
           <div className={`${mobileFiltersOpen ? 'block' : 'hidden'} lg:block lg:col-span-1`}>
             <div className="bg-white rounded-2xl shadow-xl p-6 border-2 border-slate-200 sticky top-4">
               <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <Filter className="w-6 h-6 bg-blue-500" />
+                <Filter className="w-6 h-6 text-amber-500" />
                 Filters
               </h2>
 
@@ -141,9 +144,9 @@ export default function ShopPage() {
                         value={rating}
                         checked={minRating === rating}
                         onChange={(e) => setMinRating(Number(e.target.value))}
-                        className="w-4 h-4 bg-blue-500 cursor-pointer"
+                        className="w-4 h-4 text-amber-500 cursor-pointer"
                       />
-                      <span className="text-slate-700 group-hover:bg-slate-900 transition font-semibold">
+                      <span className="text-slate-700 group-hover:text-amber-600 transition font-semibold">
                         {rating === 0 ? 'All Ratings' : `${rating}+ ⭐`}
                       </span>
                     </label>
@@ -195,7 +198,7 @@ export default function ShopPage() {
                       setPriceRange([0, 1000]);
                       setMinRating(0);
                     }}
-                    className="bg-slate-900 hover:bg-amber-700 font-bold transition"
+                    className="text-amber-600 hover:text-amber-700 font-bold transition"
                   >
                     Clear filters
                   </button>
@@ -205,7 +208,7 @@ export default function ShopPage() {
               <>
                 <div className="mb-6 flex items-center justify-between bg-white p-4 rounded-xl shadow-md border border-slate-200">
                   <p className="text-slate-700 font-semibold">
-                    Showing <span className="bg-slate-900 font-bold text-lg">{filteredProducts.length}</span> products
+                    Showing <span className="text-amber-600 font-bold text-lg">{filteredProducts.length}</span> products
                   </p>
                 </div>
 
