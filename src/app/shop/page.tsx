@@ -95,32 +95,6 @@ export default function ShopPage() {
               Filters
             </h2>
 
-            {/* Category Filter */}
-            <div className="mb-6">
-              <h3 className="font-semibold text-gray-900 mb-3">Category</h3>
-              <div className="space-y-2">
-                {[
-                  { value: 'all', label: 'All Products' },
-                  { value: 'electronics', label: 'Electronics' },
-                  { value: 'fashion', label: 'Fashion' },
-                  { value: 'home', label: 'Home & Garden' },
-                  { value: 'books', label: 'Books' },
-                ].map((cat) => (
-                  <label key={cat.value} className="flex items-center gap-2 cursor-pointer">
-                    <input
-                      type="radio"
-                      name="category"
-                      value={cat.value}
-                      checked={selectedCategory === cat.value}
-                      onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="w-4 h-4 text-blue-600 cursor-pointer"
-                    />
-                    <span className="text-gray-700">{cat.label}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
             {/* Price Range Filter */}
             <div className="mb-6 pb-6 border-b border-blue-200">
               <h3 className="font-semibold text-gray-900 mb-3">Price Range</h3>

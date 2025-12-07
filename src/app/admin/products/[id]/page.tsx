@@ -109,7 +109,7 @@ export default function ProductForm() {
             value={product.name}
             onChange={handleChange}
             placeholder="Es. Sony WH-1000XM4 Headphones"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
             required
           />
         </div>
@@ -122,7 +122,7 @@ export default function ProductForm() {
               name="category"
               value={product.category}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
               required
             >
               <option value="Electronics">Electronics</option>
@@ -142,7 +142,7 @@ export default function ProductForm() {
               onChange={handleChange}
               placeholder="0.00"
               step="0.01"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
               required
             />
           </div>
@@ -160,7 +160,7 @@ export default function ProductForm() {
               min="0"
               max="5"
               step="0.1"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
             />
           </div>
 
@@ -171,7 +171,7 @@ export default function ProductForm() {
               name="stock"
               value={product.stock}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
             />
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function ProductForm() {
             value={product.image}
             onChange={handleChange}
             placeholder="https://example.com/image.jpg"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
             required
           />
           {product.image && (
@@ -205,7 +205,7 @@ export default function ProductForm() {
             onChange={handleChange}
             placeholder="Descrizione dettagliata del prodotto..."
             rows={4}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
           />
         </div>
 

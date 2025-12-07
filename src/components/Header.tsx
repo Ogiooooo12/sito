@@ -88,20 +88,8 @@ export function Header() {
       {/* Navigation Menu */}
       <nav className="hidden md:flex border-t border-gray-200 bg-gray-50">
         <div className="max-w-7xl mx-auto w-full flex items-center px-4">
-          <Link href="/shop" className="px-4 py-3 text-sm font-medium hover:text-blue-600 transition font-bold">
+          <Link href="/shop" className="px-4 py-3 text-sm font-medium text-black hover:text-blue-600 transition font-bold">
             🛍️ Shop
-          </Link>
-          <Link href="/categories/electronics" className="px-4 py-3 text-sm font-medium hover:text-blue-600 transition">
-            Electronics
-          </Link>
-          <Link href="/categories/fashion" className="px-4 py-3 text-sm font-medium hover:text-blue-600 transition">
-            Fashion
-          </Link>
-          <Link href="/categories/home" className="px-4 py-3 text-sm font-medium hover:text-blue-600 transition">
-            Home & Garden
-          </Link>
-          <Link href="/categories/books" className="px-4 py-3 text-sm font-medium hover:text-blue-600 transition">
-            Books
           </Link>
           <Link href="/sale" className="px-4 py-3 text-sm font-medium text-red-600 hover:text-red-700 font-bold transition">
             🔥 Sale
@@ -113,23 +101,11 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-gray-200 bg-white">
           <nav className="flex flex-col">
-            <Link href="/shop" className="px-4 py-3 border-b text-sm font-medium font-bold">
+            <Link href="/shop" className="px-4 py-3 border-b text-sm font-medium font-bold text-black">
               🛍️ Shop
             </Link>
-            <Link href="/categories/electronics" className="px-4 py-3 border-b text-sm font-medium">
-              Electronics
-            </Link>
-            <Link href="/categories/fashion" className="px-4 py-3 border-b text-sm font-medium">
-              Fashion
-            </Link>
-            <Link href="/categories/home" className="px-4 py-3 border-b text-sm font-medium">
-              Home & Garden
-            </Link>
-            <Link href="/categories/books" className="px-4 py-3 border-b text-sm font-medium">
-              Books
-            </Link>
             <Link href="/sale" className="px-4 py-3 text-sm font-medium text-red-600">
-              Sale
+              🔥 Sale
             </Link>
           </nav>
         </div>
