@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Trash2, Plus } from 'lucide-react';
 
 interface Category {
   id: string;
@@ -44,50 +45,52 @@ export default function AdminCategories() {
 
   return (
     <div>
-      <h1 className="text-4xl font-bold text-gray-800 mb-8">Gestisci Categorie</h1>
+      <h1 className="text-4xl font-bold text-gray-900 mb-8">Categorie</h1>
 
       {/* Form Nuova Categoria */}
-      <div className="bg-white rounded-lg shadow-lg p-8 mb-8 max-w-2xl">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">➕ Nuova Categoria</h2>
+      <div className="bg-white rounded-lg shadow p-8 mb-8 max-w-2xl">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Aggiungi Categoria</h2>
         <div className="mb-4">
-          <label className="block text-gray-700 font-semibold mb-2">Nome</label>
+          <label className="block text-gray-900 font-semibold mb-2">Nome</label>
           <input
             type="text"
             value={newCategory}
             onChange={(e) => setNewCategory(e.target.value)}
             placeholder="Es. Sportswear"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <div className="mb-6">
-          <label className="block text-gray-700 font-semibold mb-2">Descrizione</label>
+          <label className="block text-gray-900 font-semibold mb-2">Descrizione</label>
           <input
             type="text"
             value={newDescription}
             onChange={(e) => setNewDescription(e.target.value)}
             placeholder="Descrizione breve..."
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <button
           onClick={addCategory}
-          className="bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-8 py-2 rounded-lg font-semibold hover:shadow-lg transition"
+          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition"
         >
-          ✅ Aggiungi
+          <Plus className="w-4 h-4" />
+          Aggiungi
         </button>
       </div>
 
       {/* Categories List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {categories.map((category) => (
-          <div key={category.id} className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-indigo-600">
-            <h3 className="text-xl font-bold text-gray-800 mb-2">{category.name}</h3>
+          <div key={category.id} className="bg-white rounded-lg shadow p-6 border-l-4 border-blue-600">
+            <h3 className="text-lg font-bold text-gray-900 mb-2">{category.name}</h3>
             <p className="text-gray-600 mb-4">{category.description}</p>
             <button
               onClick={() => deleteCategory(category.id)}
-              className="text-red-600 hover:text-red-800 font-semibold"
+              className="text-red-600 hover:text-red-800 font-semibold flex items-center gap-1"
             >
-              🗑️ Elimina
+              <Trash2 className="w-4 h-4" />
+              Elimina
             </button>
           </div>
         ))}

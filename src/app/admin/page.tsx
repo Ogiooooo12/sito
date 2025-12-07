@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { TrendingUp, Package, ShoppingCart, Users } from 'lucide-react';
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState({
@@ -11,72 +13,76 @@ export default function AdminDashboard() {
   });
 
   useEffect(() => {
-    // Simulated stats - in production, fetch from API
+    const savedProducts = localStorage.getItem('products');
+    const products = savedProducts ? JSON.parse(savedProducts) : [];
+    
     setStats({
-      totalProducts: 15,
+      totalProducts: products.length,
       totalOrders: 0,
       totalRevenue: 0,
       totalUsers: 0,
     });
   }, []);
 
+  const StatCard = ({ icon: Icon, label, value, color }: any) => (
+    <div className="bg-white rounded-lg shadow p-6 border-l-4" style={{ borderLeftColor: color }}>
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-gray-500 text-sm font-semibold">{label}</p>
+          <p className="text-3xl font-bold text-gray-900 mt-1">{value}</p>
+        </div>
+        <Icon className="w-12 h-12" style={{ color }} />
+      </div>
+    </div>
+  );
+
   return (
     <div>
-      <h1 className="text-4xl font-bold text-gray-800 mb-8">Dashboard</h1>
+      <div className="mb-8">
+        <h1 className="text-4xl font-bold text-gray-900">Dashboard</h1>
+        <p className="text-gray-600 mt-2">Benvenuto nel tuo pannello di controllo</p>
+      </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-        {/* Card Prodotti */}
-        <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-indigo-600">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-gray-500 text-sm font-semibold">PRODOTTI</p>
-              <p className="text-3xl font-bold text-gray-800">{stats.totalProducts}</p>
-            </div>
-            <div className="text-4xl">📦</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <StatCard icon={Package} label="PRODOTTI" value={stats.totalProducts} color="#2563eb" />
+        <StatCard icon={ShoppingCart} label="ORDINI" value={stats.totalOrders} color="#7c3aed" />
+        <StatCard icon={TrendingUp} label="RICAVI" value={`$${stats.totalRevenue}`} color="#059669" />
+        <StatCard icon={Users} label="UTENTI" value={stats.totalUsers} color="#dc2626" />
+      </div>
+
+      {/* Quick Actions */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div className="bg-white rounded-lg shadow p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Azioni Rapide</h2>
+          <div className="space-y-3">
+            <Link href="/admin/products/new" className="block px-4 py-3 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg font-semibold transition">
+              ➕ Aggiungi Nuovo Prodotto
+            </Link>
+            <Link href="/admin/categories" className="block px-4 py-3 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg font-semibold transition">
+              🏷️ Gestisci Categorie
+            </Link>
+            <Link href="/admin/products" className="block px-4 py-3 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg font-semibold transition">
+              📦 Visualizza Prodotti
+            </Link>
           </div>
         </div>
 
-        {/* Card Ordini */}
-        <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-purple-600">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-gray-500 text-sm font-semibold">ORDINI</p>
-              <p className="text-3xl font-bold text-gray-800">{stats.totalOrders}</p>
-            </div>
-            <div className="text-4xl">📋</div>
-          </div>
-        </div>
-
-        {/* Card Revenue */}
-        <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-pink-600">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-gray-500 text-sm font-semibold">RICAVI</p>
-              <p className="text-3xl font-bold text-gray-800">${stats.totalRevenue}</p>
-            </div>
-            <div className="text-4xl">💰</div>
-          </div>
-        </div>
-
-        {/* Card Utenti */}
-        <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-600">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-gray-500 text-sm font-semibold">UTENTI</p>
-              <p className="text-3xl font-bold text-gray-800">{stats.totalUsers}</p>
-            </div>
-            <div className="text-4xl">👥</div>
+        <div className="bg-white rounded-lg shadow p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Informazioni Utili</h2>
+          <div className="space-y-3 text-sm text-gray-600">
+            <p>✅ Pannello completamente funzionante</p>
+            <p>✅ Gestione prodotti integrata</p>
+            <p>✅ Tracking ordini in tempo reale</p>
+            <p>✅ Dashboard analytics</p>
           </div>
         </div>
       </div>
 
-      {/* Welcome Section */}
-      <div className="bg-gradient-to-r from-indigo-600 to-pink-600 text-white rounded-lg p-8">
-        <h2 className="text-2xl font-bold mb-2">Benvenuto nel Panel Amministrativo</h2>
-        <p className="text-indigo-100">
-          Gestisci i tuoi prodotti, categorie, ordini e visualizza statistiche in tempo reale.
-        </p>
+      {/* Recent Products */}
+      <div className="bg-white rounded-lg shadow p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Ultimi Prodotti</h2>
+        <p className="text-gray-600">Vai a <Link href="/admin/products" className="text-blue-600 hover:underline font-semibold">Prodotti</Link> per visualizzare e gestire tutti i tuoi prodotti.</p>
       </div>
     </div>
   );

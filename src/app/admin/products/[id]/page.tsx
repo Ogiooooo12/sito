@@ -91,25 +91,25 @@ export default function ProductForm() {
 
   return (
     <div>
-      <Link href="/admin/products" className="text-indigo-600 hover:text-indigo-800 font-semibold mb-6 inline-block">
+      <Link href="/admin/products" className="text-blue-600 hover:text-blue-800 font-semibold mb-6 inline-block">
         ← Torna ai Prodotti
       </Link>
 
-      <h1 className="text-4xl font-bold text-gray-800 mb-8">
-        {isEdit ? '✏️ Modifica Prodotto' : '➕ Nuovo Prodotto'}
+      <h1 className="text-4xl font-bold text-gray-900 mb-8">
+        {isEdit ? 'Modifica Prodotto' : 'Nuovo Prodotto'}
       </h1>
 
-      <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8 max-w-2xl">
+      <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow p-8 max-w-2xl">
         {/* Nome */}
         <div className="mb-6">
-          <label className="block text-gray-700 font-semibold mb-2">Nome Prodotto *</label>
+          <label className="block text-gray-900 font-semibold mb-2">Nome Prodotto *</label>
           <input
             type="text"
             name="name"
             value={product.name}
             onChange={handleChange}
             placeholder="Es. Sony WH-1000XM4 Headphones"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
         </div>
@@ -117,12 +117,12 @@ export default function ProductForm() {
         {/* Categoria */}
         <div className="grid grid-cols-2 gap-6 mb-6">
           <div>
-            <label className="block text-gray-700 font-semibold mb-2">Categoria *</label>
+            <label className="block text-gray-900 font-semibold mb-2">Categoria *</label>
             <select
               name="category"
               value={product.category}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             >
               <option value="Electronics">Electronics</option>
@@ -134,7 +134,7 @@ export default function ProductForm() {
 
           {/* Prezzo */}
           <div>
-            <label className="block text-gray-700 font-semibold mb-2">Prezzo ($) *</label>
+            <label className="block text-gray-900 font-semibold mb-2">Prezzo ($) *</label>
             <input
               type="number"
               name="price"
@@ -142,7 +142,7 @@ export default function ProductForm() {
               onChange={handleChange}
               placeholder="0.00"
               step="0.01"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -151,7 +151,7 @@ export default function ProductForm() {
         {/* Rating e Stock */}
         <div className="grid grid-cols-2 gap-6 mb-6">
           <div>
-            <label className="block text-gray-700 font-semibold mb-2">Rating ⭐ (0-5)</label>
+            <label className="block text-gray-900 font-semibold mb-2">Rating ⭐ (0-5)</label>
             <input
               type="number"
               name="rating"
@@ -160,32 +160,32 @@ export default function ProductForm() {
               min="0"
               max="5"
               step="0.1"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
           <div>
-            <label className="block text-gray-700 font-semibold mb-2">Stock (pezzi)</label>
+            <label className="block text-gray-900 font-semibold mb-2">Stock (pezzi)</label>
             <input
               type="number"
               name="stock"
               value={product.stock}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
         </div>
 
         {/* URL Immagine */}
         <div className="mb-6">
-          <label className="block text-gray-700 font-semibold mb-2">URL Immagine *</label>
+          <label className="block text-gray-900 font-semibold mb-2">URL Immagine *</label>
           <input
             type="url"
             name="image"
             value={product.image}
             onChange={handleChange}
             placeholder="https://example.com/image.jpg"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
           {product.image && (
@@ -198,14 +198,14 @@ export default function ProductForm() {
 
         {/* Descrizione */}
         <div className="mb-6">
-          <label className="block text-gray-700 font-semibold mb-2">Descrizione</label>
+          <label className="block text-gray-900 font-semibold mb-2">Descrizione</label>
           <textarea
             name="description"
             value={product.description}
             onChange={handleChange}
             placeholder="Descrizione dettagliata del prodotto..."
             rows={4}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
@@ -213,13 +213,13 @@ export default function ProductForm() {
         <div className="flex gap-4">
           <button
             type="submit"
-            className="flex-1 bg-gradient-to-r from-indigo-600 to-pink-600 text-white font-semibold py-3 rounded-lg hover:shadow-lg transition"
+            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition"
           >
             {isEdit ? '✅ Salva Modifiche' : '✅ Crea Prodotto'}
           </button>
           <Link
             href="/admin/products"
-            className="flex-1 bg-gray-300 text-gray-800 font-semibold py-3 rounded-lg hover:bg-gray-400 transition text-center"
+            className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-900 font-semibold py-3 rounded-lg transition text-center"
           >
             ✕ Annulla
           </Link>

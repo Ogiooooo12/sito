@@ -40,6 +40,21 @@ export default function AdminOrders() {
   const getStatusColor = (status: Order['status']) => {
     switch (status) {
       case 'Pending':
+        return '#fbbf24';
+      case 'Processing':
+        return '#3b82f6';
+      case 'Shipped':
+        return '#a855f7';
+      case 'Delivered':
+        return '#10b981';
+      default:
+        return '#6b7280';
+    }
+  };
+
+  const getStatusBg = (status: Order['status']) => {
+    switch (status) {
+      case 'Pending':
         return 'bg-yellow-100 text-yellow-800';
       case 'Processing':
         return 'bg-blue-100 text-blue-800';
@@ -54,53 +69,51 @@ export default function AdminOrders() {
 
   return (
     <div>
-      <h1 className="text-4xl font-bold text-gray-800 mb-8">Gestisci Ordini</h1>
+      <h1 className="text-4xl font-bold text-gray-900 mb-8">Ordini</h1>
 
       {/* Orders Table */}
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-        <table className="w-full">
-          <thead className="bg-gray-800 text-white">
-            <tr>
-              <th className="px-6 py-3 text-left">Ordine ID</th>
-              <th className="px-6 py-3 text-left">Cliente</th>
-              <th className="px-6 py-3 text-left">Email</th>
-              <th className="px-6 py-3 text-left">Totale</th>
-              <th className="px-6 py-3 text-left">Data</th>
-              <th className="px-6 py-3 text-left">Stato</th>
-              <th className="px-6 py-3 text-left">Azioni</th>
-            </tr>
-          </thead>
-          <tbody>
-            {orders.map((order, index) => (
-              <tr key={order.id} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                <td className="px-6 py-4 font-bold text-indigo-600">{order.id}</td>
-                <td className="px-6 py-4 font-semibold text-gray-800">{order.customer}</td>
-                <td className="px-6 py-4 text-gray-600">{order.email}</td>
-                <td className="px-6 py-4 font-bold text-gray-800">${order.total.toFixed(2)}</td>
-                <td className="px-6 py-4 text-gray-600">{order.date}</td>
-                <td className="px-6 py-4">
-                  <select
-                    value={order.status}
-                    onChange={(e) => updateOrderStatus(order.id, e.target.value as Order['status'])}
-                    className={`px-3 py-1 rounded-full text-sm font-semibold ${getStatusColor(order.status)} cursor-pointer`}
-                  >
-                    <option value="Pending">Pending</option>
-                    <option value="Processing">Processing</option>
-                    <option value="Shipped">Shipped</option>
-                    <option value="Delivered">Delivered</option>
-                  </select>
-                </td>
-                <td className="px-6 py-4">
-                  <button className="text-indigo-600 hover:text-indigo-800 font-semibold">👁️ Dettagli</button>
-                </td>
+      <div className="bg-white rounded-lg shadow overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead className="bg-gray-50 border-b border-gray-200">
+              <tr>
+                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">ID Ordine</th>
+                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Cliente</th>
+                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Email</th>
+                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Totale</th>
+                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Data</th>
+                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Stato</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              {orders.map((order) => (
+                <tr key={order.id} className="hover:bg-gray-50 transition">
+                  <td className="px-6 py-4 text-sm font-bold text-blue-600">{order.id}</td>
+                  <td className="px-6 py-4 text-sm font-semibold text-gray-900">{order.customer}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">{order.email}</td>
+                  <td className="px-6 py-4 text-sm font-bold text-gray-900">${order.total.toFixed(2)}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">{order.date}</td>
+                  <td className="px-6 py-4 text-sm">
+                    <select
+                      value={order.status}
+                      onChange={(e) => updateOrderStatus(order.id, e.target.value as Order['status'])}
+                      className={`px-3 py-1 rounded-full text-sm font-semibold ${getStatusBg(order.status)} cursor-pointer border-0`}
+                    >
+                      <option value="Pending">Pending</option>
+                      <option value="Processing">Processing</option>
+                      <option value="Shipped">Shipped</option>
+                      <option value="Delivered">Delivered</option>
+                    </select>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {orders.length === 0 && (
-        <div className="text-center py-12 text-gray-500">
+        <div className="text-center py-12 text-gray-500 bg-white rounded-lg">
           <p className="text-lg">Nessun ordine trovato</p>
         </div>
       )}
