@@ -6,17 +6,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export default function SalePage() {
   const products = [
-    {
-      id: '2',
-      name: 'Smart Watch Ultra Pro',
-      slug: 'smart-watch-ultra-pro',
-      price: 499.99,
-      discount: 40,
-      image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop',
-      rating: 4.6,
-      reviews: 189,
-      inStock: true,
-    },
+    // Sale list updated — product removed per request
     {
       id: '3',
       name: '4K Webcam Professional',
