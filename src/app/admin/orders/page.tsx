@@ -57,9 +57,9 @@ export default function AdminOrders() {
       case 'Pending':
         return 'bg-yellow-100 text-yellow-800';
       case 'Processing':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-100 text-slate-800';
       case 'Shipped':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-100 text-slate-800';
       case 'Delivered':
         return 'bg-green-100 text-green-800';
       default:
@@ -88,7 +88,7 @@ export default function AdminOrders() {
             <tbody className="divide-y divide-gray-200">
               {orders.map((order) => (
                 <tr key={order.id} className="hover:bg-gray-50 transition">
-                  <td className="px-6 py-4 text-sm font-bold text-blue-600">{order.id}</td>
+                  <td className="px-6 py-4 text-sm font-bold text-slate-600">{order.id}</td>
                   <td className="px-6 py-4 text-sm font-semibold text-gray-900">{order.customer}</td>
                   <td className="px-6 py-4 text-sm text-gray-600">{order.email}</td>
                   <td className="px-6 py-4 text-sm font-bold text-gray-900">${order.total.toFixed(2)}</td>

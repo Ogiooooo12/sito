@@ -101,7 +101,7 @@ export default function OrderConfirmationPage() {
         </Link>
         <Link
           href="/account"
-          className="flex-1 border-2 border-blue-600 text-blue-600 py-3 rounded-lg font-bold hover:bg-blue-50 transition text-center"
+          className="flex-1 border-2 border-blue-600 text-slate-600 py-3 rounded-lg font-bold hover:bg-blue-50 transition text-center"
         >
           View My Orders
         </Link>
@@ -111,15 +111,15 @@ export default function OrderConfirmationPage() {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <div className="grid grid-cols-3 gap-6">
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">30</div>
+            <div className="text-3xl font-bold text-slate-600 mb-2">30</div>
             <p className="text-sm text-gray-600">Day Returns</p>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">✓</div>
+            <div className="text-3xl font-bold text-slate-600 mb-2">✓</div>
             <p className="text-sm text-gray-600">100% Secure</p>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+            <div className="text-3xl font-bold text-slate-600 mb-2">24/7</div>
             <p className="text-sm text-gray-600">Support</p>
           </div>
         </div>

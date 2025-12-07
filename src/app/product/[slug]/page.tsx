@@ -67,7 +67,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Back Button */}
-      <Link href="/" className="flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-8">
+      <Link href="/" className="flex items-center gap-2 text-slate-600 hover:text-slate-700 mb-8">
         <ArrowLeft className="w-4 h-4" />
         Back to Shopping
       </Link>
@@ -120,7 +120,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                 ${product.originalPrice}
               </span>
             </div>
-            <p className="text-blue-600 font-semibold">
+            <p className="text-slate-600 font-semibold">
               Save ${(product.originalPrice - product.price).toFixed(2)}
             </p>
           </div>
@@ -165,7 +165,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
               onClick={handleWishlist}
               className={`px-6 py-3 rounded-lg border-2 font-bold transition ${
                 isWishlisted
-                  ? 'bg-blue-50 border-blue-600 text-blue-600'
+                  ? 'bg-blue-50 border-blue-600 text-slate-600'
                   : 'border-gray-300 text-gray-700 hover:border-blue-600'
               }`}
             >
@@ -193,7 +193,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
           <ul className="space-y-3">
             {product.features.map((feature, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <span className="text-blue-600 font-bold mt-1">✓</span>
+                <span className="text-slate-600 font-bold mt-1">✓</span>
                 <span className="text-gray-700">{feature}</span>
               </li>
             ))}

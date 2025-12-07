@@ -56,7 +56,7 @@ export default function AdminDashboard() {
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Azioni Rapide</h2>
           <div className="space-y-3">
-            <Link href="/admin/products/new" className="block px-4 py-3 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg font-semibold transition">
+            <Link href="/admin/products/new" className="block px-4 py-3 bg-blue-50 hover:bg-blue-100 text-slate-700 rounded-lg font-semibold transition">
               ➕ Aggiungi Nuovo Prodotto
             </Link>
             <Link href="/admin/categories" className="block px-4 py-3 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg font-semibold transition">
@@ -82,7 +82,7 @@ export default function AdminDashboard() {
       {/* Recent Products */}
       <div className="bg-white rounded-lg shadow p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Ultimi Prodotti</h2>
-        <p className="text-gray-600">Vai a <Link href="/admin/products" className="text-blue-600 hover:underline font-semibold">Prodotti</Link> per visualizzare e gestire tutti i tuoi prodotti.</p>
+        <p className="text-gray-600">Vai a <Link href="/admin/products" className="text-slate-600 hover:underline font-semibold">Prodotti</Link> per visualizzare e gestire tutti i tuoi prodotti.</p>
       </div>
     </div>
   );

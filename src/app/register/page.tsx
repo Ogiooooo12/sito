@@ -81,7 +81,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-50 px-4 py-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 px-4 py-8">
       <div className="w-full max-w-md">
         {/* Card */}
         <div className="bg-white rounded-2xl shadow-xl p-8">
@@ -106,7 +106,7 @@ export default function RegisterPage() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="John Doe"
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900"
                 />
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function RegisterPage() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="you@example.com"
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900"
                 />
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function RegisterPage() {
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="••••••••"
-                  className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900"
                 />
                 <button
                   type="button"
@@ -171,7 +171,7 @@ export default function RegisterPage() {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   placeholder="••••••••"
-                  className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900"
                 />
                 <button
                   type="button"
@@ -197,11 +197,11 @@ export default function RegisterPage() {
               />
               <span className="text-gray-600">
                 I agree to the{' '}
-                <Link href="/terms" className="text-blue-600 hover:text-blue-700 font-semibold">
+                <Link href="/terms" className="text-amber-600 hover:text-amber-700 font-semibold">
                   Terms and Conditions
                 </Link>{' '}
                 and{' '}
-                <Link href="/privacy" className="text-blue-600 hover:text-blue-700 font-semibold">
+                <Link href="/privacy" className="text-amber-600 hover:text-amber-700 font-semibold">
                   Privacy Policy
                 </Link>
               </span>
@@ -211,7 +211,7 @@ export default function RegisterPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 text-white font-semibold py-2 rounded-lg transition"
+              className="w-full bg-gradient-to-r from-slate-900 to-amber-600 hover:from-slate-800 hover:to-amber-700 disabled:opacity-50 text-white font-semibold py-2 rounded-lg transition"
             >
               {isLoading ? 'Creating Account...' : 'Create Account'}
             </button>
@@ -220,7 +220,7 @@ export default function RegisterPage() {
           {/* Footer */}
           <p className="text-center text-sm text-gray-600 mt-6">
             Already have an account?{' '}
-            <Link href="/login" className="text-blue-600 hover:text-blue-700 font-semibold">
+            <Link href="/login" className="text-amber-600 hover:text-amber-700 font-semibold">
               Sign in
             </Link>
           </p>

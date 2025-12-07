@@ -46,7 +46,7 @@ export default function AdminProducts() {
         </div>
         <Link
           href="/admin/products/new"
-          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition"
+          className="flex items-center gap-2 bg-slate-900 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-semibold transition"
         >
           <Plus className="w-4 h-4" />
           Nuovo Prodotto
@@ -72,7 +72,7 @@ export default function AdminProducts() {
                   <tr key={product.id} className="hover:bg-gray-50 transition">
                     <td className="px-6 py-4 text-sm font-semibold text-gray-900">{product.name}</td>
                     <td className="px-6 py-4 text-sm text-gray-600">{product.category}</td>
-                    <td className="px-6 py-4 text-sm font-bold text-blue-600">${product.price.toFixed(2)}</td>
+                    <td className="px-6 py-4 text-sm font-bold text-slate-600">${product.price.toFixed(2)}</td>
                     <td className="px-6 py-4 text-sm">
                       <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">
                         ⭐ {product.rating.toFixed(1)}
@@ -82,7 +82,7 @@ export default function AdminProducts() {
                       <div className="flex gap-3">
                         <Link
                           href={`/admin/products/${product.id}/edit`}
-                          className="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-1"
+                          className="text-slate-600 hover:text-slate-800 font-semibold flex items-center gap-1"
                         >
                           <Edit2 className="w-4 h-4" /> Modifica
                         </Link>
@@ -105,7 +105,7 @@ export default function AdminProducts() {
           <p className="text-lg text-gray-500 mb-4">Nessun prodotto trovato</p>
           <Link
             href="/admin/products/new"
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+            className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-800 font-semibold"
           >
             <Plus className="w-4 h-4" />
             Crea il primo prodotto

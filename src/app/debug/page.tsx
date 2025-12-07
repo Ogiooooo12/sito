@@ -24,7 +24,7 @@ export default function DebugPage() {
         <div className="bg-white rounded-lg shadow p-6 mb-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">localStorage Status</h2>
           <p className="text-gray-700 mb-4">
-            Prodotti nel localStorage: <span className="font-bold text-blue-600">{storageData?.length || 0}</span>
+            Prodotti nel localStorage: <span className="font-bold text-slate-600">{storageData?.length || 0}</span>
           </p>
           <button
             onClick={clearStorage}
@@ -42,7 +42,7 @@ export default function DebugPage() {
         </div>
 
         <div className="mt-8">
-          <a href="/" className="text-blue-600 hover:text-blue-800 font-semibold">
+          <a href="/" className="text-slate-600 hover:text-slate-800 font-semibold">
             ← Back to Home
           </a>
         </div>

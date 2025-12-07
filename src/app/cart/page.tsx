@@ -21,7 +21,7 @@ export default function CartPage() {
           </p>
           <Link
             href="/categories/electronics"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition"
+            className="inline-block bg-slate-900 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold transition"
           >
             <ArrowLeft className="inline mr-2 w-5 h-5" />
             Continue Shopping
@@ -62,7 +62,7 @@ export default function CartPage() {
                 {/* Product Details */}
                 <div className="flex-1">
                   <Link href={`/product/${item.productId}`}>
-                    <h3 className="font-semibold text-gray-900 hover:text-blue-600 transition">
+                    <h3 className="font-semibold text-gray-900 hover:text-slate-600 transition">
                       {item.name}
                     </h3>
                   </Link>
@@ -103,7 +103,7 @@ export default function CartPage() {
 
           <Link
             href="/categories/electronics"
-            className="mt-6 text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-2"
+            className="mt-6 text-slate-600 hover:text-slate-700 font-semibold flex items-center gap-2"
           >
             <ArrowLeft className="w-4 h-4" />
             Continue Shopping
@@ -169,7 +169,7 @@ export default function CartPage() {
                 <input
                   type="text"
                   placeholder="Enter code"
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
                 />
                 <button className="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-semibold transition">
                   Apply

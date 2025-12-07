@@ -58,12 +58,12 @@ export default function AdminLayout({
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition duration-200"
+              className="w-full bg-slate-900 hover:bg-amber-700 text-white font-semibold py-3 rounded-lg transition duration-200"
             >
               Accedi
             </button>
@@ -86,7 +86,7 @@ export default function AdminLayout({
             >
               {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
-            <h1 className="text-2xl font-bold text-blue-600">StoreLux Admin</h1>
+            <h1 className="text-2xl font-bold text-slate-600">StoreLux Admin</h1>
           </div>
           <button
             onClick={handleLogout}
@@ -107,7 +107,7 @@ export default function AdminLayout({
             
             <Link
               href="/admin"
-              className="block px-4 py-3 rounded-lg hover:bg-blue-600 transition font-semibold text-white"
+              className="block px-4 py-3 rounded-lg hover:bg-slate-900 transition font-semibold text-white"
             >
               📊 Dashboard
             </Link>
@@ -116,21 +116,21 @@ export default function AdminLayout({
             
             <Link
               href="/admin/products"
-              className="block px-4 py-3 rounded-lg hover:bg-blue-600 transition font-semibold text-white"
+              className="block px-4 py-3 rounded-lg hover:bg-slate-900 transition font-semibold text-white"
             >
               📦 Prodotti
             </Link>
             
             <Link
               href="/admin/products/new"
-              className="block px-4 py-3 rounded-lg hover:bg-blue-600 transition font-semibold text-white"
+              className="block px-4 py-3 rounded-lg hover:bg-slate-900 transition font-semibold text-white"
             >
               ➕ Nuovo Prodotto
             </Link>
             
             <Link
               href="/admin/categories"
-              className="block px-4 py-3 rounded-lg hover:bg-blue-600 transition font-semibold text-white"
+              className="block px-4 py-3 rounded-lg hover:bg-slate-900 transition font-semibold text-white"
             >
               🏷️ Categorie
             </Link>
@@ -139,14 +139,14 @@ export default function AdminLayout({
             
             <Link
               href="/admin/orders"
-              className="block px-4 py-3 rounded-lg hover:bg-blue-600 transition font-semibold text-white"
+              className="block px-4 py-3 rounded-lg hover:bg-slate-900 transition font-semibold text-white"
             >
               📋 Ordini
             </Link>
             
             <Link
               href="/admin/analytics"
-              className="block px-4 py-3 rounded-lg hover:bg-blue-600 transition font-semibold text-white"
+              className="block px-4 py-3 rounded-lg hover:bg-slate-900 transition font-semibold text-white"
             >
               📈 Analytics
             </Link>
@@ -155,7 +155,7 @@ export default function AdminLayout({
             
             <Link
               href="/"
-              className="block px-4 py-3 rounded-lg hover:bg-blue-600 transition font-semibold text-white"
+              className="block px-4 py-3 rounded-lg hover:bg-slate-900 transition font-semibold text-white"
             >
               🛍️ Visita Sito
             </Link>

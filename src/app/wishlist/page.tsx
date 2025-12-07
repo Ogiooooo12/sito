@@ -42,7 +42,7 @@ export default function WishlistPage() {
           </p>
           <Link
             href="/categories/electronics"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition"
+            className="inline-block bg-slate-900 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold transition"
           >
             <ArrowLeft className="inline mr-2 w-5 h-5" />
             Continue Shopping
@@ -64,7 +64,7 @@ export default function WishlistPage() {
 
       <Link
         href="/categories/electronics"
-        className="text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-2"
+        className="text-slate-600 hover:text-slate-700 font-semibold flex items-center gap-2"
       >
         <ArrowLeft className="w-4 h-4" />
         Continue Shopping

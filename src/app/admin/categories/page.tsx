@@ -57,7 +57,7 @@ export default function AdminCategories() {
             value={newCategory}
             onChange={(e) => setNewCategory(e.target.value)}
             placeholder="Es. Sportswear"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
           />
         </div>
         <div className="mb-6">
@@ -67,12 +67,12 @@ export default function AdminCategories() {
             value={newDescription}
             onChange={(e) => setNewDescription(e.target.value)}
             placeholder="Descrizione breve..."
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
           />
         </div>
         <button
           onClick={addCategory}
-          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition"
+          className="flex items-center gap-2 bg-slate-900 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold transition"
         >
           <Plus className="w-4 h-4" />
           Aggiungi
